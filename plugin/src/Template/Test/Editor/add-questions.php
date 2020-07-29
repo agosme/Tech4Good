@@ -27,3 +27,6 @@
     </tr>
 <?php endforeach ?>
 </table>
+
+
+<H2>Custom Text in Editor</H2>
