@@ -6,6 +6,7 @@ name: Build
 on:
   push:
     branches: [ master ]
+
   pull_request:
     branches: [ master ]
 
@@ -24,7 +25,8 @@ jobs:
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew build
-      - name: Archive code coverage results
+      - name: Archive plugin
         uses: actions/upload-artifact@v2
         with:
-          path: plugin/build/wp-test-paloIt-plugin.zip
+          name: plugin
+          path: plugin/build
