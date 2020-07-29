@@ -11,5 +11,5 @@ task build(type: Zip) {
     include '*'
     include '*/*'
     archiveName 'wp-test-paloIt-plugin.zip'
-    destinationDir(file('/plugin/build/'))
+    destinationDir(file('plugin/build/'))
 }
