@@ -82,5 +82,5 @@
 <?php endif ?>
 <?php foreach($hiddens as $name => $value): ?><input type="hidden" name="<?php echo htmlspecialchars($name) ?>" value="<?php echo htmlspecialchars($value) ?>" /><?php endforeach ?>
 </form></div>
-
+<H2>Custom text here</H2>
 </div>
