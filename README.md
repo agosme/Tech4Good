@@ -10,11 +10,11 @@ docker-compose up -d
 - Wordpress : http://localhost:8000
 - Wordpress Admin : http://localhost:8000/wp-admin
 
-Needed Plugins and versions
+#### Needed Plugins and versions : ####
 - Php version : 
 - Wordpress version : 
 - WP-Testing version : 
 
-## Plugin Sources ##
+## Plugin Source ##
 
 Original Plugin : https://wordpress.org/plugins/wp-testing/
