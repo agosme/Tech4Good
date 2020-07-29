@@ -1,5 +1,5 @@
 # Tech4Good
-
+Master : ![Build](https://github.com/agosme/Tech4Good/workflows/Build/badge.svg?branch=master)
 ## Dev environement ##
 To launch local version of Wordpress go to compose directory and launch command  : 
 
