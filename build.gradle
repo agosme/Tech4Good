@@ -9,7 +9,7 @@ version '0.0.1'
 task myZip(type: Zip) {
     from 'plugin/'
     include '*'
-    include '*/*' //to include contents of a folder present inside Reports directory
+    include '*/*'
     archiveName 'wp-test-paloIt-plugin.zip'
     destinationDir(file('/plugin/build/'))
 }
