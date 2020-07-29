@@ -10,7 +10,7 @@ class WpTesting_Migration_AddFormulasToExampleTest extends WpTesting_Migration_U
         $termTaxonomy       = $this->globalPrefix . 'term_taxonomy';
         $termRelashionships = $this->globalPrefix . 'term_relationships';
 
-        $testSlug = 'eysencks-personality-inventory-epi-extroversionintroversion';
+        $testSlug = 'tech4good-template';
         $testId   = $this->field("SELECT ID FROM $posts WHERE post_type = 'wpt_test' AND post_name = '$testSlug' ORDER BY ID LIMIT 1");
 
         $this->execute("
