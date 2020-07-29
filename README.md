@@ -6,8 +6,9 @@ To launch local version of Wordpress go to compose directory and launch command 
 ```shell script
 docker-compose up -d
 ```
-
-Wordpress will be exposed on port 8000
+#### Urls : #### 
+- Wordpress : http://localhost:8000
+- Wordpress Admin : http://localhost:8000/wp-admin
 
 Needed Plugins and versions
 - Php version : 
