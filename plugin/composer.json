@@ -1,0 +1,168 @@
+{
+    "name": "garex/wp-testing",
+    "description": "Helps to create psychological tests",
+    "type": "wordpress-plugin",
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "Ustimenko Alexander",
+            "email": "a@ustimen.co"
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0.0"
+        , "xrstf/composer-php52": "1.*"
+        , "ruckusing/ruckusing-migrations": "1.0.3"
+        , "flourish/flourish": "0.9.*@dev"
+        , "nikic/php-parser": "0.9.5"
+        , "samyk/evercookie": "dev-2014-10-21"
+        , "pnegri/uuid-js": "dev-master"
+        , "yahnis-elsts/plugin-update-checker": "^2.0"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "xrstf\\Composer52\\Generator::onPostInstallCmd",
+            "tools/deploy/clean-up-vendor.sh",
+            "tools/deploy/document-plugin-update-checker-usage.sh"
+        ],
+        "post-update-cmd": [
+            "xrstf\\Composer52\\Generator::onPostInstallCmd",
+            "tools/deploy/clean-up-vendor.sh",
+            "tools/deploy/document-plugin-update-checker-usage.sh"
+        ],
+        "post-autoload-dump": [
+            "xrstf\\Composer52\\Generator::onPostInstallCmd"
+        ]
+    },
+    "config": {
+        "autoloader-suffix": "WpTestingF039FAC91B306FBDD13CF04E7AC62DF9"
+    },
+    "autoload": {
+        "classmap": [
+            "db/migrations/wp_testing/",
+            "src/",
+            "vendor/yahnis-elsts/plugin-update-checker/plugin-update-checker.php"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit-php52": "dev-3.6.12-php52",
+        "phpunit/phpunit-mock-objects-php52": "dev-1.1.0-php52"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package":
+            {
+                "autoload": {
+                    "psr-0": {
+                        "Ruckusing": "lib/",
+                        "Task": "lib/"
+                    }
+                },
+                "bin": [
+                    "ruckus.php"
+                ],
+                "name": "ruckusing/ruckusing-migrations",
+                "require": {
+                    "php": ">=5.2.0"
+                },
+                "type": "library",
+                "source": {
+                    "url": "https://github.com/garex/ruckusing-migrations",
+                    "type": "git",
+                    "reference": "issue/work-in-non-writable-environment"
+                },
+                "dist": {
+                    "url": "https://github.com/garex/ruckusing-migrations/archive/issue/work-in-non-writable-environment.zip",
+                    "type": "zip"
+                },
+                "version": "1.0.3"
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "samyk/evercookie",
+                "type": "library",
+                "version": "dev-2014-10-21",
+                "dist" : {
+                    "url": "https://github.com/samyk/evercookie/archive/977db236367c509ce6b10fb565ed5a75c8d729d5.zip",
+                    "type": "zip"
+                },
+                "source": {
+                    "url": "https://github.com/samyk/evercookie.git",
+                    "type": "git",
+                    "reference": "977db236367c509ce6b10fb565ed5a75c8d729d5"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "pnegri/uuid-js",
+                "type": "library",
+                "version": "dev-master",
+                "dist" : {
+                    "url": "https://github.com/pnegri/uuid-js/archive/c0ed26d9e7de6ca8be2d3e1896fb2c920ee965c0.zip",
+                    "type": "zip"
+                },
+                "source": {
+                    "url": "https://github.com/pnegri/uuid-js",
+                    "type": "git",
+                    "reference": "c0ed26d9e7de6ca8be2d3e1896fb2c920ee965c0"
+                }
+            }
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/garex/phpunit"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/garex/phpunit-mock-objects"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "flourish/flourish",
+                "version": "0.9.x-dev",
+                "autoload": {
+                    "classmap": ["."]
+                },
+                "source": {
+                    "url": "https://github.com/garex/flourish-classes",
+                    "type": "git",
+                    "reference": "0a5b2536d9736b6fe12d8ab1b8f9ad341d2397bf"
+                },
+                "dist": {
+                    "url": "https://github.com/garex/flourish-classes/archive/0a5b2536d9736b6fe12d8ab1b8f9ad341d2397bf.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "xrstf/composer-php52",
+                "version": "v1.100",
+                "autoload": {
+                    "psr-0": {
+                        "xrstf\\Composer52": "lib/"
+                    }
+                },
+                "scripts": {
+                    "post-install-cmd": [
+                        "xrstf\\Composer52\\Generator::onPostInstallCmd"
+                    ],
+                    "post-update-cmd": [
+                        "xrstf\\Composer52\\Generator::onPostInstallCmd"
+                    ]
+                },
+                "dist": {
+                    "url": "https://bitbucket.org/garex/composer-php52/get/upgrade-getAutoloadRealFile-signature.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ]
+}

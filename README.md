@@ -12,7 +12,7 @@ docker-compose up -d
 
 #### Needed Plugins and versions : ####
 - Php version : 
-- Wordpress version : 
+- Wordpress version : 5.4.2 ? 
 - WP-Testing version : 
 
 ## Plugin Source ##
