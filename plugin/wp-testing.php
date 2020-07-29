@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: Wp-testing
- * Plugin URI: http://wordpress.org/extend/plugins/wp-testing/
- * Description: Helps to create psychological tests.
- * Version: 0.17.2
- * Author: Alexander Ustimenko
- * Author URI: http://ustimen.co
+ * Plugin Name: Wp-testing-Palo-It
+ * Plugin URI: https://github.com/agosme/Tech4Good
+ * Description: THis plugin is an extension of the original plugin wp-testing.
+ * Version: 0.0.1
+ * Author: PaloIT
+ * Author URI: https://palo-it.com/fr/
  * License: GPL3
  * Text Domain: wp-testing
  * Domain Path: /languages
