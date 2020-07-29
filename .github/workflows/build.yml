@@ -3,12 +3,7 @@
 
 name: Build
 
-on:
-  push:
-    branches: [ master ]
-
-  pull_request:
-    branches: [ master ]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -25,6 +20,7 @@ jobs:
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew build
+
       - name: Archive plugin
         uses: actions/upload-artifact@v2
         with:
