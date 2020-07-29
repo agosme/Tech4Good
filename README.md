@@ -18,3 +18,5 @@ docker-compose up -d
 ## Plugin Source ##
 
 Original Plugin : https://wordpress.org/plugins/wp-testing/
+
+Use Gradle to create the zip plugin: gradle build
