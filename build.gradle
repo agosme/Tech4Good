@@ -6,7 +6,7 @@ allprojects {
 
 version '0.0.1'
 
-task myZip(type: Zip) {
+task build(type: Zip) {
     from 'plugin/'
     include '*'
     include '*/*'
